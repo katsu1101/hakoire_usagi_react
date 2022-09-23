@@ -10,10 +10,10 @@ export const Index = () => {
       <h2>攻略</h2>
       <ul>
         <li>
-          <a href="usagi">うさぎ一覧</a>
+          <a href="UsagiList">うさぎ一覧</a>
         </li>
         <li>
-          <a href="box">箱一覧</a>
+          <a href="BoxList">箱一覧</a>
         </li>
         <li style={{ marginTop: 15 }}>
           <a href="evolution">進化ツリー</a>

@@ -1,15 +1,26 @@
-import usagi from './usagi.json'
-import box from './box.json'
+import usagi from '../data/usagi.json'
+import box from '../data/box.json'
+import evolution from '../data/evolution.json'
 import { UsagiImage } from '../assets/img/UsagiImage'
-import { BoxInterface } from './BoxInterface'
-import { UsagiInterface } from './UsagiInterface'
+import { BoxInterface } from '../interface/BoxInterface'
+import { UsagiInterface } from '../interface/UsagiInterface'
+import { EvolutionInterface } from '../interface/EvolutionInterface'
 
+const getUsagiName = (no: string) => {
+  const u = usagi.find((u) => u.no === no)
+  return u ? u.name : '???'
+}
+const NextUsagiList = (no: string) => {
+  const e = evolution.find((e: EvolutionInterface) => e.no === no)
+  return e ? e.to : []
+}
 // UsagiImage
 const UsagiItem = (props: { usagi: UsagiInterface }) => {
   const usagiImage = UsagiImage(props.usagi.no)
   const boxList = box.map((b: BoxInterface) => {
     return b.usage?.indexOf(props.usagi.no) !== -1 ? b.name : null
   })
+  const nextUsagiList = NextUsagiList(props.usagi.no)
   return (
     <>
       <tr>
@@ -34,12 +45,19 @@ const UsagiItem = (props: { usagi: UsagiInterface }) => {
             ),
           )}
         </td>
-        <td></td>
+        <td>
+          {nextUsagiList.map((usagiNo: string) => (
+            <>
+              {usagiNo}. {getUsagiName(usagiNo)}
+              <br />
+            </>
+          ))}
+        </td>
       </tr>
     </>
   )
 }
-export const Usagi = () => {
+export const UsagiList = () => {
   return (
     <>
       <h1>箱入れうさぎ攻略・うさぎ一覧</h1>
@@ -52,7 +70,7 @@ export const Usagi = () => {
             <th>名前</th>
             <th>画像</th>
             <th>出現場所</th>
-            <th>進化</th>
+            <th>進化先</th>
           </tr>
         </thead>
         <tbody>

@@ -1,7 +1,7 @@
-import box from './box.json'
-import usagi from './usagi.json'
+import box from '../data/box.json'
+import usagi from '../data/usagi.json'
 import { BoxImage } from '../assets/img/BoxImage'
-import { BoxInterface, StatusInterface } from './BoxInterface'
+import { BoxInterface, StatusInterface } from '../interface/BoxInterface'
 
 const BoxStatus = (props: { status: StatusInterface }) => {
   return (
@@ -99,7 +99,7 @@ const BoxItem = (props: { box: BoxInterface }) => {
   )
 }
 
-export const Box = () => {
+export const BoxList = () => {
   return (
     <>
       <h1>箱入れうさぎ攻略・箱一覧</h1>
