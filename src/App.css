@@ -1,38 +1,105 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    max-width: 1024px;
+    min-width: 320px;
+    margin: auto
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 60px auto 40px;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.box {
+    width: 200px;
+    height: 95px;
+    object-fit: cover;
+    object-position: left 14%
+}
+
+.usagi {
+    width: 150px;
+    height: 69px;
+    object-fit: cover;
+    object-position: left 24%
+}
+
+.tbl-r02 th {
+    background: #e9727e;
+    border: solid 1px #ccc;
+    color: #fff;
+    padding: 10px;
+}
+
+.tbl-r02 thead th {
+    background: rgba(234, 135, 144, 0.71);
+}
+
+.tbl-r02 td {
+    border: solid 1px #ccc;
+    padding: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    .last td:last-child {
+        border-bottom: solid 1px #ccc;
+        width: 100%;
+    }
+
+    .tbl-r02 {
+        width: 80%;
+    }
+
+    .tbl-r02 th,
+    .tbl-r02 td {
+        border-bottom: none;
+        display: block;
+        width: 100%;
+    }
+
 }

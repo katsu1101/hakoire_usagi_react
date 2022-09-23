@@ -1,24 +1,21 @@
-import logo from './logo.svg'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import { Index } from 'page/Index'
+import { Box } from 'page/Box'
+import { Usagi } from 'page/Usagi'
+import { Evolution } from 'page/Evolution'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Index />} />
+        <Route path="hakoire_usagi_react" element={<Index />} />
+        <Route path="usagi" element={<Usagi />} />
+        <Route path="box" element={<Box />} />
+        <Route path="evolution" element={<Evolution />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
