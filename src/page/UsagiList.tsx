@@ -5,6 +5,7 @@ import { UsagiImage } from '../assets/img/UsagiImage'
 import { BoxInterface } from '../interface/BoxInterface'
 import { UsagiInterface } from '../interface/UsagiInterface'
 import { EvolutionInterface } from '../interface/EvolutionInterface'
+import { Link } from 'react-router-dom'
 
 const getUsagiName = (no: string) => {
   const u = usagi.find((u) => u.no === no)
@@ -61,7 +62,7 @@ export const UsagiList = () => {
   return (
     <>
       <h1>箱入れうさぎ攻略・うさぎ一覧</h1>
-      <a href="/">TOP</a>／うさぎ一覧
+      <Link to="/">TOP</Link>／うさぎ一覧
       <h2>うさぎ一覧</h2>
       <table className="tbl-r02">
         <thead>

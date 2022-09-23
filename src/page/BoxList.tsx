@@ -2,6 +2,7 @@ import box from '../data/box.json'
 import usagi from '../data/usagi.json'
 import { BoxImage } from '../assets/img/BoxImage'
 import { BoxInterface, StatusInterface } from '../interface/BoxInterface'
+import { Link } from 'react-router-dom'
 
 const BoxStatus = (props: { status: StatusInterface }) => {
   return (
@@ -103,7 +104,7 @@ export const BoxList = () => {
   return (
     <>
       <h1>箱入れうさぎ攻略・箱一覧</h1>
-      <a href="/">TOP</a>／箱一覧
+      <Link to="/">TOP</Link>／箱一覧
       <table className="tbl-r02">
         <thead>
           <tr>

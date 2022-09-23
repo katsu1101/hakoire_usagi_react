@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom'
+
 export const Evolution = () => {
   return (
     <>
       <h1>箱入れうさぎ攻略・進化ツリー</h1>
-      <a href="/">TOP</a>／進化ツリー
+      <Link to="/">TOP</Link>／進化ツリー
       <h2>ツリー</h2>
       <pre>{`
 007. みにもも
