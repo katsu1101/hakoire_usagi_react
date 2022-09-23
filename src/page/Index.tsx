@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export const Index = () => {
   return (
     <>
@@ -10,13 +12,13 @@ export const Index = () => {
       <h2>攻略</h2>
       <ul>
         <li>
-          <a href="UsagiList">うさぎ一覧</a>
+          <Link to="usagi">うさぎ一覧</Link>
         </li>
         <li>
-          <a href="BoxList">箱一覧</a>
+          <Link to="box">箱一覧</Link>
         </li>
         <li style={{ marginTop: 15 }}>
-          <a href="evolution">進化ツリー</a>
+          <Link to="evolution">進化ツリー</Link>
         </li>
       </ul>
     </>
