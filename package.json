@@ -24,10 +24,10 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
-    "rm": "del /Q docs\\*.*",
-    "mv": "move build\\*.* docs",
-    "git": "git add . && git commit && git push origin master",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "rm": "del /S /Q docs\\",
+    "cp": "xcopy /y /s build docs",
+    "git": "git add ./docs",
+    "deploy": "npm run rm && npm run build && npm run cp && npm run git"
   },
   "eslintConfig": {
     "extends": [
